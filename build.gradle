@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.50'
+}
+
+group 'kadmiv'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-alpha-3'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '4.0.0-alpha-3'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.0.0-alpha-3'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium.client-drivers/selenium-java-client-driver
+    testCompile group: 'org.seleniumhq.selenium.client-drivers', name: 'selenium-java-client-driver', version: '1.0.2'
+// https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver
+    compile group: 'com.codeborne', name: 'phantomjsdriver', version: '1.4.4'
+// https://mvnrepository.com/artifact/com.codeborne/selenide
+    compile group: 'com.codeborne', name: 'selenide', version: '5.5.0'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '4.0.0-alpha-3'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '4.0.0-alpha-2'
+//// https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-proxy
+//    compile group: 'net.lightbody.bmp', name: 'browsermob-proxy', version: '2.0-beta-8'
+//// https://mvnrepository.com/artifact/net.lightbody.bmp/littleproxy
+//    compile group: 'net.lightbody.bmp', name: 'littleproxy', version: '1.1.0-beta-bmp-17'
+//// https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-proxy
+//    compile group: 'net.lightbody.bmp', name: 'browsermob-proxy', version: '2.1.5', ext: 'pom'
+//    implementation 'net.lightbody.bmp:browsermob-proxy:2.1.5'
+    implementation 'net.lightbody.bmp:browsermob-core:2.1.5'
+
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.7.1'
+
+// https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-proxy
+    compile group: 'net.lightbody.bmp', name: 'browsermob-proxy', version: '2.1.5', ext: 'pom'
+
+
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
